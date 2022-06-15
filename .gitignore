@@ -1,0 +1,4 @@
+.env
+/storage/*
+infra/keycloak/mysql/data/
+infra/database/.docker/dbdata
