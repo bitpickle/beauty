@@ -18,9 +18,10 @@
 
 # Stack
 
-- Backend: NestJs
+- Backend: ExpressJS
 - Database: MariaDB
-- Frontend: Vite + React + ChakraUI
+- Frontend - Dashboard: Vite + Vue + Tailwind
+- Chatbot: WhatsappWeb.JS
 - Auth Server: Keycloak
 - Webserver: Nginx
 - Message Broker: RabbitMQ
