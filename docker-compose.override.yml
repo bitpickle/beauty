@@ -15,8 +15,7 @@ services:
   backend:
     build:
       context: ./backend
-      dockerfile: ../infra/nestjs/Dockerfile
-      target: dependencies
+      dockerfile: ../infra/express/Dockerfile
     environment:
       SERVICE_NAME: backend
       SERVICE_TAGS: dev
@@ -25,15 +24,14 @@ services:
       - /var/www/backend/node_modules
     depends_on:
       - mariadb
-    command: yarn start:dev
-
+    command: npm run dev
   frontend:
     build:
       context: ./frontend
       dockerfile: ../infra/vite/Dockerfile
       target: dependencies
     ports:
-      - "3000:3000"
+      - "3001:3001"
     environment:
       SERVICE_NAME: frontend
       SERVICE_TAGS: dev
